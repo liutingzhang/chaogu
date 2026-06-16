@@ -1,0 +1,11 @@
+	key	strategy_no	stock_no	stock_name	amount	operate	status	order_type	price
+0	f6bbafe2-68d3-11f1-bbf6-b025aa9acf20	agent	688262	国芯科技	200	buy	1	limit	35.78
+1	83263381-68d4-11f1-8fd2-b025aa9acf20	agent_limit	688262	国芯科技	200	buy	1	limit	35.78
+2	c37b5766-68da-11f1-acc6-b025aa9acf20	agent_limit	688262	国芯科技	200	buy	1	limit	35.78
+3	da8af2f6-68da-11f1-82d4-b025aa9acf20	agent_limit	688262	国芯科技	200	buy	1	limit	35.78
+4	51457777-698c-11f1-8613-b025aa9acf20	agent	603667	五洲新春	100	buy	1	market	
+5	63f76806-698c-11f1-ba04-b025aa9acf20	agent	603667	五洲新春	100	buy	1	market	
+6	9704197f-6990-11f1-8949-b025aa9acf20	agent	603667	五洲新春	100	buy	1	market	
+7	d1fb44ad-6991-11f1-890f-b025aa9acf20	agent	603667	五洲新春	100	buy	1	market	
+8	11f72778-6996-11f1-a539-b025aa9acf20	agent	603667	五洲新春	100	buy	1	market	
+9	36967516-6996-11f1-96b5-b025aa9acf20	agent	603667	五洲新春	100	buy	1	market	
