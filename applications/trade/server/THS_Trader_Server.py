@@ -55,12 +55,17 @@ class THSTraderServer:
         time.sleep(API_Config.cfg["sleepA"])
 
         try:
-            # 设置股票代码
-            self.main_wnd.window(control_id=0x408, class_name="Edit").type_keys(str(item['stock_no']))
+            # 设置股票代码：先点击输入框获取焦点，再输入，避免按键被键盘精灵捕获加入自选股
+            code_edit = self.main_wnd.window(control_id=0x408, class_name="Edit")
+            code_edit.click()
+            time.sleep(0.2)
+            code_edit.type_keys(str(item['stock_no']))
         except:
             time.sleep(API_Config.cfg["sleepC"])
-            # 设置股票代码
-            self.main_wnd.window(control_id=0x408, class_name="Edit").type_keys(str(item['stock_no']))
+            code_edit = self.main_wnd.window(control_id=0x408, class_name="Edit")
+            code_edit.click()
+            time.sleep(0.2)
+            code_edit.type_keys(str(item['stock_no']))
 
         # 判断是否存在市场的二义性
         self._resolve_market_ambiguity(item)
@@ -68,10 +73,16 @@ class THSTraderServer:
         time.sleep(API_Config.cfg["sleepA"])
 
         try:
-            self.main_wnd.window(control_id=0x40A, class_name="Edit").type_keys(str(item['amount']))  # 设置股数目
+            amount_edit = self.main_wnd.window(control_id=0x40A, class_name="Edit")
+            amount_edit.click()
+            time.sleep(0.2)
+            amount_edit.type_keys(str(item['amount']))  # 设置股数目
         except:
             time.sleep(API_Config.cfg["sleepC"])
-            self.main_wnd.window(control_id=0x40A, class_name="Edit").type_keys(str(item['amount']))  # 设置股数目
+            amount_edit = self.main_wnd.window(control_id=0x40A, class_name="Edit")
+            amount_edit.click()
+            time.sleep(0.2)
+            amount_edit.type_keys(str(item['amount']))  # 设置股数目
 
         time.sleep(API_Config.cfg["sleepA"])
         text = ""
@@ -179,10 +190,16 @@ class THSTraderServer:
 
         # 设置股票代码
         try:
-            self.main_wnd.window(control_id=0x408, class_name="Edit").type_keys(str(item['stock_no']))
+            code_edit = self.main_wnd.window(control_id=0x408, class_name="Edit")
+            code_edit.click()
+            time.sleep(0.2)
+            code_edit.type_keys(str(item['stock_no']))
         except:
             time.sleep(API_Config.cfg["sleepC"])
-            self.main_wnd.window(control_id=0x408, class_name="Edit").type_keys(str(item['stock_no']))
+            code_edit = self.main_wnd.window(control_id=0x408, class_name="Edit")
+            code_edit.click()
+            time.sleep(0.2)
+            code_edit.type_keys(str(item['stock_no']))
 
         # 判断是否存在市场的二义性
         self._resolve_market_ambiguity(item)
@@ -191,10 +208,16 @@ class THSTraderServer:
 
         # 设置股数目
         try:
-            self.main_wnd.window(control_id=0x40A, class_name="Edit").type_keys(str(item['amount']))
+            amount_edit = self.main_wnd.window(control_id=0x40A, class_name="Edit")
+            amount_edit.click()
+            time.sleep(0.2)
+            amount_edit.type_keys(str(item['amount']))
         except:
             time.sleep(API_Config.cfg["sleepC"])
-            self.main_wnd.window(control_id=0x40A, class_name="Edit").type_keys(str(item['amount']))
+            amount_edit = self.main_wnd.window(control_id=0x40A, class_name="Edit")
+            amount_edit.click()
+            time.sleep(0.2)
+            amount_edit.type_keys(str(item['amount']))
 
         time.sleep(API_Config.cfg["sleepA"])
         text = ""
